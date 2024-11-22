@@ -1,0 +1,93 @@
+/* Reset geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(27, 19, 36);
+}
+
+/* Header com plano de fundo */
+header {
+    background: url('wallpaper.jpg') no-repeat center center;
+    background-size: cover;
+    height: 30vh; /* Altura do banner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Barra de navegação */
+.nav-bar {
+    background-color: rgb(138, 43, 226);
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    flex-wrap: wrap; /* Ajusta os itens para a próxima linha em telas pequenas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.nav-bar .slot {
+    background-color: rgb(105, 89, 205);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-bar .slot:hover {
+    background-color: rgb(72, 61, 139);
+}
+
+/* Main */
+main {
+    padding: 20px;
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Rodapé */
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    border-top: 2px solid rgb(105, 89, 205);
+    width: 100%; /* Garante que o rodapé cubra toda a largura */
+    margin-top: auto; /* Faz com que o rodapé "grude" no final */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Ajusta o texto no main para ocupar mais espaço */
+    main {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    /* Reorganiza a barra de navegação */
+    .nav-bar {
+        flex-direction: column; /* Muda para coluna em telas pequenas */
+        gap: 10px;
+        align-items: center;
+    }
+
+    .nav-bar .slot {
+        width: 80%; /* Ocupa 80% da largura para se adequar a telas menores */
+    }
+
+    /* Ajusta o header para ocupar menos espaço */
+    header {
+        height: 25vh;
+    }
+}
